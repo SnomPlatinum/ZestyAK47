@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3 uid="uid://coicf1lch1e0n"]
+
+[ext_resource type="Script" path="res://scene/game_over_menu.gd" id="1_e2ls3"]
+[ext_resource type="FontFile" uid="uid://bkuo7ayqnagdt" path="res://assets/HomeVideo-BLG6G.ttf" id="2_6btq6"]
+[ext_resource type="FontFile" uid="uid://boxg32t4ekstl" path="res://assets/Artifakt Element Bold.ttf" id="3_x6d0q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ue0dx"]
+bg_color = Color(0.188969, 0.188969, 0.188969, 1)
+border_color = Color(0.47788, 0.47788, 0.47788, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0.111197, 0.111197, 0.111197, 0.6)
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_e2ls3")
+
+[node name="GameOverPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -100.0
+offset_right = 148.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ue0dx")
+
+[node name="ResultLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -76.0
+offset_right = 80.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.768729, 0.768729, 0.768729, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_6btq6")
+theme_override_font_sizes/font_size = 70
+text = "GAME
+OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = 60.0
+offset_right = 52.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_pressed_color = Color(0.89709, 0.89709, 0.89709, 1)
+theme_override_colors/font_pressed_color = Color(0.65218, 0.65218, 0.65218, 1)
+theme_override_colors/font_focus_color = Color(0.881937, 0.881937, 0.881937, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0.30139, 0.30139, 0.30139, 1)
+theme_override_colors/icon_focus_color = Color(0.109341, 0.109341, 0.109341, 1)
+theme_override_colors/icon_hover_color = Color(0.210507, 0.210507, 0.210507, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.188969, 0.188969, 0.188969, 1)
+theme_override_fonts/font = ExtResource("3_x6d0q")
+theme_override_font_sizes/font_size = 14
+text = "PLAY AGAIN"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

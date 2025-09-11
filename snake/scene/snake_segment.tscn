@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhcq022nws5uv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_im7tr"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0.111197, 0.111197, 0.111197, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(0, 5)
+
+[node name="SnakeSegment" type="Panel" groups=["segments"]]
+offset_right = 25.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_im7tr")
