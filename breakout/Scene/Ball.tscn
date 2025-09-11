@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3oo1ue0u2sgy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plrh2"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Ball" type="Node"]
+
+[node name="BallPanel" type="Panel" parent="."]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_plrh2")
